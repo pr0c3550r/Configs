@@ -1,2 +1,4 @@
 # Configs
-Config files of my artixlinux system
+Config files of my artixlinux system:
++ Zsh
++ Vim
