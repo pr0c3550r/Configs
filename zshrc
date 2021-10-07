@@ -162,6 +162,7 @@ alias key="setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrl_alt
 
 alias cp="cp -iv"
 alias mk="mkdir -pv"
+alias rm="rm-rf"
 
 #Alias for doas typos
 
