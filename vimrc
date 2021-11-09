@@ -14,15 +14,9 @@ set splitbelow splitright
 highlight Normal guibg=NONE ctermbg=NONE
 
 map <leader>c :w! \| !xelatex "<c-r>%"<CR>
-"map <leader>p :!zathura *.pdf <c-r>%<CR><CR>
+map <F12> :w! \| !xelatex "<c-r>%"<CR>
 
 autocmd VimLeave *.tex !texclear %
 
-cnoremap w!! execute 'silent! write !doas tee % >/dev/null' <bar> edit!
-
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-map Q gq
+map <F5> gq
+map <F4> $
