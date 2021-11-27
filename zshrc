@@ -3,8 +3,8 @@
 #--------------------------------------------------------------------------------------------------------------
 
 #Configuration of ZSH by: pr073c70r
-#Version: 1.3
-#Last Update: 03.10.2021
+#Version: 1.4
+#Last Update: 27.11.2021
 #Info: Runs on Openrc
 
 #--------------------------------------------------------------------------------------------------------------
@@ -14,7 +14,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=long-list select=0
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '/home/th3g3ntl3m4n/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 
@@ -133,7 +133,7 @@ alias quit="exit"
 
 #Alias fast command for pinging a website
 
-alias pingg="ping securepoint.de"
+alias pingg="ping 1.1.1.1"
 
 #Alias for new article -> LaTeX related; new latex document with article template is created
 
@@ -154,9 +154,9 @@ alias travel="xrandr --output HDMI-1 --auto --right-of LVDS-1 && xwallpaper --ou
 alias notravel="xrandr --output HDMI-1 --off && notify-send --urgency=low --expire-time=6000 'Switched to laptop'"
 
 #Alias for swapping the Layout of new connected Keyboards to german with the option of Caps = Escape and Escape = Caps for easier access in Vim and the terminal
-#alias key="setxkbmap -option caps:swapescape de"
+alias key="setxkbmap -option caps:swapescape de"
 
-alias key="setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrl_alt_toggle' && notify-send --urgency=low --expire-time=6000 'Set keyboard layout'"
+#alias key="setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrl_alt_toggle' && notify-send --urgency=low --expire-time=6000 'Set keyboard layout'"
 
 #Shortening to long and common commands
 
@@ -166,7 +166,7 @@ alias rm="rm -rfi"
 
 #Alias for doas typos
 
-alias sudo="doas"
+#alias sudo="doas"
 alias dosa="doas"
 alias odas="doas"
 alias daos="doas"
