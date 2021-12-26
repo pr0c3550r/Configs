@@ -3,9 +3,10 @@
 #--------------------------------------------------------------------------------------------------------------
 
 #Configuration of ZSH by: pr073c70r
-#Version: 1.4
-#Last Update: 27.11.2021
+#Version: 1.5
+#Last Update: 26.12.2021
 #Info: Runs on Openrc
+#Dependency: zsh-syntax-highlighting
 
 #--------------------------------------------------------------------------------------------------------------
 
@@ -14,7 +15,8 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=long-list select=0
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '$HOME/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
+zmodload zsh/complist
 autoload -Uz compinit
 compinit
 
@@ -63,7 +65,7 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 #PROMPTS I like and have configured some time ago
 
-PROMPT='%B[%F{#b83939}%n%f%F{255}@%f%F{#006D75}%m%f]%b %B[%F{#ffd800}%~%f%b%B%F{255}]%f%b %B%F{#b48ead}>%f%b ' 
+PROMPT='%B[%F{#b83939}%n%f%F{255}@%f%F{#006D75}%m%f]%b %B[%F{#ffd800}%~%f%b%B%F{255}]%f%  %B%F{#b48ead}>%f%b ' 
 #PROMPT='%B[%F{#b83939}%n%f%F{255}@%f%F{#689d6a}%m%f]%b %B[%F{#ffd800}%~%f%b%B%F{255}]%f%b %B%F{#b48ead}>%f%b ' 
 RPROMPT='%B%F{#ffd800}${vcs_info_msg_0_}%f%b' 
 
@@ -101,6 +103,16 @@ RPROMPT='%B%F{#ffd800}${vcs_info_msg_0_}%f%b'
 
 #-------------------------------------------------------------------------------------------------------------
 
+# use the vi keys to navigate the menu completion
+
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+
+#-------------------------------------------------------------------------------------------------------------
+
 #ALIAS
 
 #Alias for Listings
@@ -133,7 +145,7 @@ alias quit="exit"
 
 #Alias fast command for pinging a website
 
-alias pingg="ping 1.1.1.1"
+alias pingg="ping securepoint.de"
 
 #Alias for new article -> LaTeX related; new latex document with article template is created
 
@@ -187,5 +199,6 @@ alias lock="slock | loginctl suspend"
 export EDITOR="vim"
 export TERMINAL="st"
 
+
 #--------------------------------------------------------------------------------------------------------------
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
