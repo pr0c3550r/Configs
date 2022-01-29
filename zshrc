@@ -1,11 +1,10 @@
 #ZSH-CONFIG
 
-
 #--------------------------------------------------------------------------------------------------------------
 
 #Configuration of ZSH by: pr073c70r
-#Version: 1.5
-#Last Update: 26.12.2021
+#Version: 1.3
+#Last Update: 03.10.2021
 #Info: Runs on Openrc
 #Dependency: zsh-syntax-highlighting
 
@@ -16,7 +15,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=long-list select=0
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename '/home/pr073c70r/.zshrc'
 zmodload zsh/complist
 autoload -Uz compinit
 compinit
@@ -66,9 +65,10 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 #PROMPTS I like and have configured some time ago
 
-PROMPT='%B[%F{#b83939}%n%f%F{255}@%f%F{#006D75}%m%f]%b %B[%F{#ffd800}%~%f%b%B%F{255}]%f%  %B%F{#b48ead}>%f%b ' 
+PROMPT='%B[%F{#b83939}%n%f%F{255}@%f%F{#006D75}%m%f]%b %B[%F{#ffd800}%~%f%b%B%F{255}]%f%b %B%F{#ffd800}${vcs_info_msg_0_}%f%b'$'\n''%B%F{#b48ead}>%f%b '
+
 #PROMPT='%B[%F{#b83939}%n%f%F{255}@%f%F{#689d6a}%m%f]%b %B[%F{#ffd800}%~%f%b%B%F{255}]%f%b %B%F{#b48ead}>%f%b ' 
-RPROMPT='%B%F{#ffd800}${vcs_info_msg_0_}%f%b' 
+#RPROMPT='%B%F{#ffd800}${vcs_info_msg_0_}%f%b' 
 
 #PROMPT='%B[%F{#c51f5d}%n%f%F{255}@%f%F{#43e8d8}%m%f]%b %B[%F{#fff68f}%~%f%b%B%F{255}]%f%b %B%F{#c51f5d}>%f%b ' 
 #RPROMPT='%B%F{255}[%f%b%B%F{#c51f5d}%*%f%b%B%F{255}]%f%b'
@@ -105,7 +105,6 @@ RPROMPT='%B%F{#ffd800}${vcs_info_msg_0_}%f%b'
 #-------------------------------------------------------------------------------------------------------------
 
 # use the vi keys to navigate the menu completion
-
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
@@ -176,6 +175,14 @@ alias key="setxkbmap -option caps:swapescape de"
 alias cp="cp -iv"
 alias mk="mkdir -pv"
 alias rm="rm -rfi"
+
+#Alias for vim
+
+alias v="vim"
+
+#Alias for zathura
+
+alias z="zathura"
 
 #Alias for doas typos
 
