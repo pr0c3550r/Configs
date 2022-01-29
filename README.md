@@ -1,5 +1,5 @@
 # Configs
-Config files of my artixlinux system:
+Config files:
 + Zsh
 + Vim
 + Zathura
