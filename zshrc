@@ -22,8 +22,6 @@ compinit
 
 #--------------------------------------------------------------------------------------------------------------
 
-# Lines configured by zsh-newuser-install
-
 HISTFILE=~/.config/.histfile
 HISTSIZE=1000
 SAVEHIST=1000 
@@ -153,12 +151,12 @@ alias na="cp ~/.LaTeX/template.tex"
 
 #Alias for changing the Output of the XServer to the Outputs HDMI-2 (Dock) and VGA-1 (Dock) when I am at Home at my Desk, sets my Wallpapers to the ones I like. Also sets the Keyboard config to the standart i use (caps:swapescape = swaps caps and escape keys, because on desk I use an external keyboard). 
 
-alias desk="xrandr --output HDMI-2 --auto --left-of LVDS-1 && xrandr --output LVDS-1 --off && xrandr --output VGA-1 --auto --right-of HDMI-2 && xwallpaper --output HDMI-2 --zoom ~/Pictures/Wallpaper/see.jpg --output VGA-1 --zoom ~/Pictures/Wallpaper/see.jpg && setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrl_alt_toggle' && notify-send --urgency=low --expire-time=6000 'Switched to desk-setup'"
+alias desk="xrandr --output HDMI-2 --auto --left-of LVDS-1 && xrandr --output LVDS-1 --off && xrandr --output VGA-1 --auto --right-of HDMI-2 && xwallpaper --output HDMI-2 --zoom ~/Pictures/Wallpaper/see.jpg --output VGA-1 --zoom ~/Pictures/Wallpaper/see.jpg && setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrls_toggle' && notify-send --urgency=low --expire-time=6000 'Switched to desk-setup'"
 
 #Alias for changing the Output of the XServer to the Laptop Screen and sets the Wallpaper to my prefered one.
 
 alias nodesk="xrandr --output HDMI-2 --off && xrandr --output VGA-1 --off && xrandr --output LVDS-1 --auto && xwallpaper --output LVDS-1 --maximize ~/Pictures/Wallpaper/see.jpg && notify-send --urgency=low --expire-time=6000 'Switched to laptop'"
-alias onlyVGAondesk="xrandr --output LVDS-1 --off && xrandr --output VGA-1 --auto && xwallpaper --output VGA-1 --zoom ~/Pictures/Wallpaper/see.jpg && setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrl_alt_toggle' && notify-send --urgency=low --expire-time=6000 'Switched to only-VGA-mode'"
+alias onlyVGAondesk="xrandr --output LVDS-1 --off && xrandr --output VGA-1 --auto && xwallpaper --output VGA-1 --zoom ~/Pictures/Wallpaper/see.jpg && setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrls_toggle' && notify-send --urgency=low --expire-time=6000 'Switched to only-VGA-mode'"
 
 #Alias for connecting Monitors on the go and setting the Wallpaper 
 
@@ -166,9 +164,9 @@ alias travel="xrandr --output HDMI-1 --auto --right-of LVDS-1 && xwallpaper --ou
 alias notravel="xrandr --output HDMI-1 --off && notify-send --urgency=low --expire-time=6000 'Switched to laptop'"
 
 #Alias for swapping the Layout of new connected Keyboards to german with the option of Caps = Escape and Escape = Caps for easier access in Vim and the terminal
-alias key="setxkbmap -option caps:swapescape de"
+#alias key="setxkbmap -option caps:swapescape de"
 
-#alias key="setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrl_alt_toggle' && notify-send --urgency=low --expire-time=6000 'Set keyboard layout'"
+alias key="setxkbmap -layout de,eu -option caps:swapescape -option 'grp:ctrls_toggle' && notify-send --urgency=low --expire-time=6000 'Set keyboard layout'"
 
 #Shortening to long and common commands
 

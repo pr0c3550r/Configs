@@ -1,0 +1,43 @@
+
+[global]
+	monitor = 0
+	follow = keyboard
+	width = 370
+	height = 350
+	origin= top-right
+	offset = 20x20
+	scale = 0
+	notification_limit = 0
+	progress_bar = true
+	progress_bar_height = 10
+	progress_bar_frame_width = 1
+	progress_bar_min_width = 150
+	progress_bar_max_width = 300
+	indicate_hidden = yes
+	sort = yes
+	corner_radius = 8
+	padding = 8
+	horizontal_padding = 8
+	transparency = 8
+	font = JetbrainsMono 12
+	format = "<b>%s</b>\n%b"
+
+	frame_width = 2
+
+	[urgency_normal]
+	foreground = "#ffffff"
+	background = "#000000"
+	frame_color = "#8f0000"
+	timeout = 10
+
+	[urgency_critical]
+	foreground = "#ffffff"
+	background = "#000000"
+	frame_color = "#8f0000"
+	timeout = 10
+
+	[urgency_low]
+	foreground = "#ffffff"
+	background = "#000000"
+	frame_color = "#8f0000"
+	timeout = 10
